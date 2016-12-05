@@ -1,0 +1,65 @@
+- Rydde i Highlight.Update og BoardManager.Update
+- Add attack
+- Add visual counters for health
+- Make units have backgroundcolor corresponding to player.
+- Add mapchooser
+
+- Add mouse selecting
+- Ranged attacks that highlights other units.
+- Terrain abilities that highlights any tile.
+- Convert graphics from bmp to png.
+- Maybe not store units twice, both in boardmanager dictionaries and in player lists.
+- Maybe not store both tileTextures and arrowMoveTextures in same List.
+
+- Combat mechanics
+- Game objectives
+- Sound effects
+- Music
+
+
+- More units
+
+
+
+Bugs:
+- previousKeyboardState!=current, påvirker ikke gamepads, så gamepads funker ikke.
+
+
+Done:
+- Add unitclass and unitmanagerclass and unittypeenum
+- Add Tab selecting
+- Add map
+  - Add MapManager class. Class reads NOT YET from textfile, and places tiles. Each tile has its own graphics. Like game editor!
+- Highlight selected unit
+- Add snap-to-tiles
+- Tabselecting can rotate around from last to first. (Circular Listing)
+- Add no crashing with existing units (Lots of work! Merging Unit- and MapManager into BoardManager).
+- File- and code clean-up.
+- Add Turns
+- Add two players
+  - Make units belong to either player
+- Highlight code clean-up
+- Endre BelongsTo til "player" Bare bruke den player class hos boardobject, i stedet for enum.
+- Insta-kill on move
+- Endre slik at highlight drawer seg selv.
+- Win-Condition, slik at når en spiller mister alle brikker, så stopper spillet.
+- Add menuscreen (Also added CombatScreen and a GameScreenManager that does much of the work that Game1 previously did.) (No Winconditions right now)
+- Merge TakeKeyInput andUpdate for all GameScreens, in order to check for WinConditions. (Has WinConditions)
+- Add Winscreen
+- BoardManager Class reads from textfile to generate units.
+- Units can now be assigned to either player.
+- Need to press 'M' before a unit can be moved.
+- BoardManager Class reads from textfile to generate tiles.
+- Move command: select move for selected unit, then arrows highlight possible move locations, and the player can use arrows to move around.
+- Added some text whenever a unit is killed.
+- Text is "killerUnit.Name killed victimUnit.Name".
+- Added exhaustion (2 for all units).
+- Added different highlightcolors based on exhaustion.
+- Added exhaustion dots.
+- Added (in-code) option for auto-selecting next unit on exhaustion.
+- Moved movearrows from tile to highlight.
+- Add fightIcon
+
+Combat Mechanics:
+- Less randomness
+- HP and full attack if low HP.
